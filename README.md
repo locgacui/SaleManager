@@ -2,7 +2,7 @@
 - Viết bởi: Nguyễn Thành Lộc
 - Ngôn ngữ: C#
 - Công cụ: Visual Studio, DevExpress, MS SQL Sever
-#Installation
+# Installation
 ### Bước 1: 
 Mở file theo đường dẫn “1721005000_NguyenThanhLoc_17DTH\Đóng gói chương trình\QuanLyBanHang.exe”.
 ### Bước 2: 
