@@ -1,0 +1,927 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E3286A24-8CD1-4C6A-8185-B5A0BF8A7F62}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyBanHang</RootNamespace>
+    <AssemblyName>QuanLyBanHang</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v19.1" />
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.1" />
+    <Reference Include="DevExpress.DataAccess.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Persistent.Base.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Persistent.BaseImpl.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Export, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.SpellChecker.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1" />
+    <Reference Include="DevExpress.Utils.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.1" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core" />
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Extensions, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Wizard, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDialogs.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1" />
+    <Reference Include="DevExpress.XtraGauges.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.1.Extensions, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpellChecker.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPPlus, Version=5.6.3.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.5.6.3\lib\net45\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OfficeOpenXml.Core.ExcelPackage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OfficeOpenXml.Core.ExcelPackage.1.0.0\lib\net46\OfficeOpenXml.Core.ExcelPackage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BanHang.Designer.cs">
+      <DependentUpon>BanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportCustomerSale.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportCustomerSale.Designer.cs">
+      <DependentUpon>ReportCustomerSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDocumentExport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDocumentExport.Designer.cs">
+      <DependentUpon>ReportDocumentExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDocumentExportDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDocumentExportDetail.Designer.cs">
+      <DependentUpon>ReportDocumentExportDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDocumentExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDocumentExportForm.Designer.cs">
+      <DependentUpon>ReportDocumentExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDocumentImport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDocumentImport.Designer.cs">
+      <DependentUpon>ReportDocumentImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDocumentImportDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDocumentImportDetail.Designer.cs">
+      <DependentUpon>ReportDocumentImportDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDocumentImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDocumentImportForm.Designer.cs">
+      <DependentUpon>ReportDocumentImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDocumentSale.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDocumentSale.Designer.cs">
+      <DependentUpon>ReportDocumentSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDocumentSaleDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDocumentSaleDetail.Designer.cs">
+      <DependentUpon>ReportDocumentSaleDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDocumentSaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDocumentSaleForm.Designer.cs">
+      <DependentUpon>ReportDocumentSaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportEmployeeExport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportEmployeeExport.Designer.cs">
+      <DependentUpon>ReportEmployeeExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportEmployeeImport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportEmployeeImport.Designer.cs">
+      <DependentUpon>ReportEmployeeImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportEmployeeSale.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportEmployeeSale.Designer.cs">
+      <DependentUpon>ReportEmployeeSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportItemExport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportItemExport.Designer.cs">
+      <DependentUpon>ReportItemExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportItemImport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportItemImport.Designer.cs">
+      <DependentUpon>ReportItemImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportItemSale.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportItemSale.Designer.cs">
+      <DependentUpon>ReportItemSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportStockWarehouse.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportStockWarehouse.Designer.cs">
+      <DependentUpon>ReportStockWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportSupplierExport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportSupplierExport.Designer.cs">
+      <DependentUpon>ReportSupplierExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportSupplierImport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportSupplierImport.Designer.cs">
+      <DependentUpon>ReportSupplierImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportSupplierSale.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportSupplierSale.Designer.cs">
+      <DependentUpon>ReportSupplierSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportWarehouseExport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportWarehouseExport.Designer.cs">
+      <DependentUpon>ReportWarehouseExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportWarehouseImport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportWarehouseImport.Designer.cs">
+      <DependentUpon>ReportWarehouseImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\BaoCaoNCCXH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\BaoCaoNCCXH.Designer.cs">
+      <DependentUpon>BaoCaoNCCXH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\BaoCaoKhoXH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse\BaoCaoKhoXH.Designer.cs">
+      <DependentUpon>BaoCaoKhoXH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item\BaoCaoSanPhamXH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item\BaoCaoSanPhamXH.Designer.cs">
+      <DependentUpon>BaoCaoSanPhamXH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\BaoCaoNCCNH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\BaoCaoNCCNH.Designer.cs">
+      <DependentUpon>BaoCaoNCCNH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\BaoCaoKhoNH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse\BaoCaoKhoNH.Designer.cs">
+      <DependentUpon>BaoCaoKhoNH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item\BaoCaoSanPhamNH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item\BaoCaoSanPhamNH.Designer.cs">
+      <DependentUpon>BaoCaoSanPhamNH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\BaoCaoNVNH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\BaoCaoNVNH.Designer.cs">
+      <DependentUpon>BaoCaoNVNH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\BaoCaoNVXH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\BaoCaoNVXH.Designer.cs">
+      <DependentUpon>BaoCaoNVXH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\BaoCaoKhachHangBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\BaoCaoKhachHangBH.Designer.cs">
+      <DependentUpon>BaoCaoKhachHangBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item\BaoCaoSanPhamBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item\BaoCaoSanPhamBH.Designer.cs">
+      <DependentUpon>BaoCaoSanPhamBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\BaoCaoNVBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\BaoCaoNVBH.Designer.cs">
+      <DependentUpon>BaoCaoNVBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FormReport.Designer.cs">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDanhSachDVT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDanhSachDVT.Designer.cs">
+      <DependentUpon>ReportDanhSachDVT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDanhSachKhachHang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDanhSachKhachHang.Designer.cs">
+      <DependentUpon>ReportDanhSachKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDanhSachKho.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDanhSachKho.Designer.cs">
+      <DependentUpon>ReportDanhSachKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDanhSachMatHang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDanhSachMatHang.Designer.cs">
+      <DependentUpon>ReportDanhSachMatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDanhSachNhaCC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDanhSachNhaCC.Designer.cs">
+      <DependentUpon>ReportDanhSachNhaCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDanhSachNhanVien.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDanhSachNhanVien.Designer.cs">
+      <DependentUpon>ReportDanhSachNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDanhSachNhomHang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDanhSachNhomHang.Designer.cs">
+      <DependentUpon>ReportDanhSachNhomHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\BaoCaoNCCBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\BaoCaoNCCBH.Designer.cs">
+      <DependentUpon>BaoCaoNCCBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\ChinhSuaKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse\ChinhSuaKho.Designer.cs">
+      <DependentUpon>ChinhSuaKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\DanhSachKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse\DanhSachKho.Designer.cs">
+      <DependentUpon>DanhSachKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Warehouse.cs" />
+    <Compile Include="Unit\ChinhSuaDVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unit\ChinhSuaDVT.Designer.cs">
+      <DependentUpon>ChinhSuaDVT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unit\DanhSachDVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unit\DanhSachDVT.Designer.cs">
+      <DependentUpon>DanhSachDVT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\ChinhSuaNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\ChinhSuaNCC.Designer.cs">
+      <DependentUpon>ChinhSuaNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ChinhSuaKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\ChinhSuaKhachHang.Designer.cs">
+      <DependentUpon>ChinhSuaKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Supplier.cs" />
+    <Compile Include="GroupItem\ChinhSuaNhomMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupItem\ChinhSuaNhomMH.Designer.cs">
+      <DependentUpon>ChinhSuaNhomMH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageData\CodeSupplier.cs" />
+    <Compile Include="Price\CapNhatGiaMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\CapNhatGiaMH.Designer.cs">
+      <DependentUpon>CapNhatGiaMH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item\ChinhSuaMatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item\ChinhSuaMatHang.Designer.cs">
+      <DependentUpon>ChinhSuaMatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GroupItem.cs" />
+    <Compile Include="Item\DanhSachMatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item\DanhSachMatHang.Designer.cs">
+      <DependentUpon>DanhSachMatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageData\CodeGroupItem.cs" />
+    <Compile Include="Supplier\DanhSachNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\DanhSachNCC.Designer.cs">
+      <DependentUpon>DanhSachNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unit\ThemDVTMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unit\ThemDVTMH.Designer.cs">
+      <DependentUpon>ThemDVTMH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\ChuyenKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse\ChuyenKho.Designer.cs">
+      <DependentUpon>ChuyenKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\DanhSachKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\DanhSachKhachHang.Designer.cs">
+      <DependentUpon>DanhSachKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupItem\DanhSachLoaiHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupItem\DanhSachLoaiHang.Designer.cs">
+      <DependentUpon>DanhSachLoaiHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DanhSachTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\DanhSachTaiKhoan.Designer.cs">
+      <DependentUpon>DanhSachTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Account.cs" />
+    <Compile Include="Data\Customer.cs" />
+    <Compile Include="Data\DocDetail.cs" />
+    <Compile Include="Data\Document.cs" />
+    <Compile Include="Data\Employee.cs" />
+    <Compile Include="Data\Item.cs" />
+    <Compile Include="Data\Unit.cs" />
+    <Compile Include="Data\UnitPrice.cs" />
+    <Compile Include="Employee\ChinhSuaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\ChinhSuaNhanVien.Designer.cs">
+      <DependentUpon>ChinhSuaNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LenhHayDung.cs" />
+    <Compile Include="Employee\DanhSachNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\DanhSachNhanVien.Designer.cs">
+      <DependentUpon>DanhSachNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageData\CodeCustomer.cs" />
+    <Compile Include="ManageData\CodeDocDetail.cs" />
+    <Compile Include="ManageData\CodeDocument.cs" />
+    <Compile Include="ManageData\CodeItem.cs" />
+    <Compile Include="ManageData\CodeUnit.cs" />
+    <Compile Include="ManageData\CodeUnitPrice.cs" />
+    <Compile Include="ManageData\CodeWarehouse.cs" />
+    <Compile Include="Account\DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\TaoTKNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\TaoTKNhanVien.Designer.cs">
+      <DependentUpon>TaoTKNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DangNhapNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\DangNhapNhanVien.Designer.cs">
+      <DependentUpon>DangNhapNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ManageData\CodeAccount.cs" />
+    <Compile Include="ManageData\CodeEmployee.cs" />
+    <Compile Include="Warehouse\TonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse\TonKho.Designer.cs">
+      <DependentUpon>TonKho.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BanHang.resx">
+      <DependentUpon>BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportCustomerSale.resx">
+      <DependentUpon>ReportCustomerSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDocumentExport.resx">
+      <DependentUpon>ReportDocumentExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDocumentExportDetail.resx">
+      <DependentUpon>ReportDocumentExportDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDocumentExportForm.resx">
+      <DependentUpon>ReportDocumentExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDocumentImport.resx">
+      <DependentUpon>ReportDocumentImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDocumentImportDetail.resx">
+      <DependentUpon>ReportDocumentImportDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDocumentImportForm.resx">
+      <DependentUpon>ReportDocumentImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDocumentSale.resx">
+      <DependentUpon>ReportDocumentSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDocumentSaleDetail.resx">
+      <DependentUpon>ReportDocumentSaleDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDocumentSaleForm.resx">
+      <DependentUpon>ReportDocumentSaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportEmployeeExport.resx">
+      <DependentUpon>ReportEmployeeExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportEmployeeImport.resx">
+      <DependentUpon>ReportEmployeeImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportEmployeeSale.resx">
+      <DependentUpon>ReportEmployeeSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportItemExport.resx">
+      <DependentUpon>ReportItemExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportItemImport.resx">
+      <DependentUpon>ReportItemImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportItemSale.resx">
+      <DependentUpon>ReportItemSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportStockWarehouse.resx">
+      <DependentUpon>ReportStockWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportSupplierExport.resx">
+      <DependentUpon>ReportSupplierExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportSupplierImport.resx">
+      <DependentUpon>ReportSupplierImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportSupplierSale.resx">
+      <DependentUpon>ReportSupplierSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportWarehouseExport.resx">
+      <DependentUpon>ReportWarehouseExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportWarehouseImport.resx">
+      <DependentUpon>ReportWarehouseImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\BaoCaoNCCXH.resx">
+      <DependentUpon>BaoCaoNCCXH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse\BaoCaoKhoXH.resx">
+      <DependentUpon>BaoCaoKhoXH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item\BaoCaoSanPhamXH.resx">
+      <DependentUpon>BaoCaoSanPhamXH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\BaoCaoNCCNH.resx">
+      <DependentUpon>BaoCaoNCCNH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse\BaoCaoKhoNH.resx">
+      <DependentUpon>BaoCaoKhoNH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item\BaoCaoSanPhamNH.resx">
+      <DependentUpon>BaoCaoSanPhamNH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\BaoCaoNVNH.resx">
+      <DependentUpon>BaoCaoNVNH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\BaoCaoNVXH.resx">
+      <DependentUpon>BaoCaoNVXH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\BaoCaoKhachHangBH.resx">
+      <DependentUpon>BaoCaoKhachHangBH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item\BaoCaoSanPhamBH.resx">
+      <DependentUpon>BaoCaoSanPhamBH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\BaoCaoNVBH.resx">
+      <DependentUpon>BaoCaoNVBH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\FormReport.resx">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDanhSachDVT.resx">
+      <DependentUpon>ReportDanhSachDVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDanhSachKhachHang.resx">
+      <DependentUpon>ReportDanhSachKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDanhSachKho.resx">
+      <DependentUpon>ReportDanhSachKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDanhSachMatHang.resx">
+      <DependentUpon>ReportDanhSachMatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDanhSachNhaCC.resx">
+      <DependentUpon>ReportDanhSachNhaCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDanhSachNhanVien.resx">
+      <DependentUpon>ReportDanhSachNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDanhSachNhomHang.resx">
+      <DependentUpon>ReportDanhSachNhomHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\BaoCaoNCCBH.resx">
+      <DependentUpon>BaoCaoNCCBH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse\ChinhSuaKho.resx">
+      <DependentUpon>ChinhSuaKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse\DanhSachKho.resx">
+      <DependentUpon>DanhSachKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unit\ChinhSuaDVT.resx">
+      <DependentUpon>ChinhSuaDVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unit\DanhSachDVT.resx">
+      <DependentUpon>DanhSachDVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\ChinhSuaNCC.resx">
+      <DependentUpon>ChinhSuaNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\ChinhSuaKhachHang.resx">
+      <DependentUpon>ChinhSuaKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupItem\ChinhSuaNhomMH.resx">
+      <DependentUpon>ChinhSuaNhomMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\CapNhatGiaMH.resx">
+      <DependentUpon>CapNhatGiaMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item\ChinhSuaMatHang.resx">
+      <DependentUpon>ChinhSuaMatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item\DanhSachMatHang.resx">
+      <DependentUpon>DanhSachMatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\DanhSachNCC.resx">
+      <DependentUpon>DanhSachNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unit\ThemDVTMH.resx">
+      <DependentUpon>ThemDVTMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse\ChuyenKho.resx">
+      <DependentUpon>ChuyenKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\DanhSachKhachHang.resx">
+      <DependentUpon>DanhSachKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupItem\DanhSachLoaiHang.resx">
+      <DependentUpon>DanhSachLoaiHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\DanhSachTaiKhoan.resx">
+      <DependentUpon>DanhSachTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\ChinhSuaNhanVien.resx">
+      <DependentUpon>ChinhSuaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\DanhSachNhanVien.resx">
+      <DependentUpon>DanhSachNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\TaoTKNhanVien.resx">
+      <DependentUpon>TaoTKNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\DangNhapNhanVien.resx">
+      <DependentUpon>DangNhapNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Warehouse\TonKho.resx">
+      <DependentUpon>TonKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_contact.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocontact2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocontact2_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\technology_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boposition2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boposition2_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newitem_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newitem_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opendoc_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\summary_16x16.png" />
+    <None Include="Resources\productsalesreport_16x16.png" />
+    <None Include="Resources\weightedpies_16x161.png" />
+    <None Include="Resources\weightedpies_32x32.png" />
+    <None Include="Resources\show_16x16.png" />
+    <None Include="Resources\save_32x32.png" />
+    <None Include="Resources\updatefield_16x16.png" />
+    <None Include="Resources\weightedpies_16x16.png" />
+    <None Include="Resources\refresh_16x16.png" />
+    <None Include="Resources\time_32x32.png" />
+    <None Include="Resources\time_16x16.png" />
+    <None Include="Resources\user_32x32.png" />
+    <None Include="Resources\user_16x16.png" />
+    <None Include="Resources\recentlyuse_16x16.png" />
+    <None Include="Resources\recentlyuse_32x32.png" />
+    <None Include="Resources\team_16x16.png" />
+    <None Include="Resources\team_32x32.png" />
+    <None Include="Resources\legendleft_16x16.png" />
+    <None Include="Resources\legendleft_32x32.png" />
+    <None Include="Resources\add_32x32.png" />
+    <None Include="Resources\EmployeePicture.jpg" />
+    <None Include="Resources\info_16x16.png" />
+    <None Include="Resources\add_16x16.png" />
+    <None Include="Resources\bouser_32x32.png" />
+    <None Include="Resources\bouser_16x16.png" />
+    <None Include="Resources\cancel_32x32.png" />
+    <None Include="Resources\cancel_16x162.png" />
+    <None Include="Resources\newgroup_32x32.png" />
+    <None Include="Resources\newgroup_16x16.png" />
+    <None Include="Resources\bodetails_32x32.png" />
+    <None Include="Resources\bodetails_16x16.png" />
+    <None Include="Resources\borole_32x32.png" />
+    <None Include="Resources\borole_16x16.png" />
+    <None Include="Resources\borole_32x321.png" />
+    <None Include="Resources\borole_16x161.png" />
+    <None Include="Resources\bouser_16x161.png" />
+    <None Include="Resources\bouser_32x321.png" />
+    <None Include="Resources\bopermission_32x32.png" />
+    <None Include="Resources\bopermission_16x16.png" />
+    <None Include="Resources\bopermission_32x321.png" />
+    <None Include="Resources\bopermission_16x161.png" />
+    <None Include="Resources\boresume_32x32.png" />
+    <None Include="Resources\boresume_16x16.png" />
+    <None Include="Resources\cube_32x32.png" />
+    <None Include="Resources\cube_16x16.png" />
+    <None Include="Resources\editrangepermission_32x32.png" />
+    <None Include="Resources\editrangepermission_16x16.png" />
+    <None Include="Resources\boproduct_32x32.png" />
+    <None Include="Resources\boproduct_16x16.png" />
+    <None Include="Resources\arrangegroups_32x32.png" />
+    <None Include="Resources\arrangegroups_16x16.png" />
+    <None Include="Resources\boorderitem_32x32.png" />
+    <None Include="Resources\boorderitem_16x16.png" />
+    <None Include="Resources\bosaleitem_32x32.png" />
+    <None Include="Resources\bosaleitem_16x16.png" />
+    <None Include="Resources\adateoccurring_16x16.png" />
+    <None Include="Resources\adateoccurring_32x32.png" />
+    <None Include="Resources\addfile_16x16.png" />
+    <None Include="Resources\addfile_16x161.png" />
+    <None Include="Resources\groupheader_16x16.png" />
+    <None Include="Resources\cleartablestyle_32x32.png" />
+    <None Include="Resources\clearpivottable_16x16.png" />
+    <None Include="Resources\formatastable_16x16.png" />
+    <None Include="Resources\newtablestyle_16x16.png" />
+    <None Include="Resources\currency_16x16.png" />
+    <None Include="Resources\formatastable_32x32.png" />
+    <None Include="Resources\pencolor_32x32.png" />
+    <None Include="Resources\clear_32x32.png" />
+    <None Include="Resources\boproduct_16x161.png" />
+    <None Include="Resources\pencolor_16x16.png" />
+    <None Include="Resources\clear_16x16.png" />
+    <None Include="Resources\boreport_32x32.png" />
+    <None Include="Resources\boreport_16x16.png" />
+    <None Include="Resources\boreport2_32x32.png" />
+    <None Include="Resources\boreport2_16x16.png" />
+    <None Include="Resources\currency2_32x32.png" />
+    <None Include="Resources\currency2_16x16.png" />
+    <None Include="Resources\newitem_32x321.png" />
+    <None Include="Resources\newitem_16x161.png" />
+    <None Include="Resources\boproduct_32x321.png" />
+    <None Include="Resources\boproduct_16x162.png" />
+    <None Include="Resources\home_32x32.png" />
+    <None Include="Resources\home_16x16.png" />
+    <None Include="Resources\home_32x321.png" />
+    <None Include="Resources\home_16x161.png" />
+    <Content Include="Resources\pngtree-businessman-avatar-icon-vector-download-vector-user-icon-avatar-silhouette-social-png-image_1991050.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ThucTap_BanHang_BravoModelStoreContainer" CdmEntityContainer="ThucTap_BanHang_BravoEntities1">
+    <EntitySetMapping Name="DocumentDetails">
+      <EntityTypeMapping TypeName="ThucTap_BanHang_BravoModel.DocumentDetail">
+        <MappingFragment StoreEntitySet="DocumentDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdDocument" ColumnName="IdDocument" />
+          <ScalarProperty Name="IdItem" ColumnName="IdItem" />
+          <ScalarProperty Name="IdWarehouse" ColumnName="IdWarehouse" />
+          <ScalarProperty Name="Quantily" ColumnName="Quantily" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
