@@ -4,7 +4,7 @@
 - Công cụ: Visual Studio, DevExpress, MS SQL Sever
 # Installation
 ### Bước 1: 
-Mở file theo đường dẫn “1721005000_NguyenThanhLoc_17DTH\Đóng gói chương trình\QuanLyBanHang.exe”.
+Mở file theo đường dẫn “QuanLyBanHang\QuanLyBanHang.sln” bằng Visual Studio
 ### Bước 2: 
 Sau khi chương trình khởi động, người dùng nhập tài khoản.
 -	Username/password: test/123.
